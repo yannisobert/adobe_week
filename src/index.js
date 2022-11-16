@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import Loading from './components/Loading';
+import Enigma from './components/Enigma';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React>
     <Loading />
+    <Enigma />
     <App />
-  </React.StrictMode>,
+  </React>,
   document.getElementById('root')
 );
