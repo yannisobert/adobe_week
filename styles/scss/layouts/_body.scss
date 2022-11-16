@@ -1,0 +1,20 @@
+
+body{
+    background-color: $almost_black;
+    width: 100%;
+
+    #__next{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        main{
+            max-width: 1400px;
+            width: 100%;
+        }
+    }
+}

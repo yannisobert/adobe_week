@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+// Jura -> for the majority of the site
+
+@font-face {
+  font-family: "Baunk";
+  src: 
+    local("Trickster"),
+    url("/public/assets/typos/Baunk.ttf") 
+    format("ttf");
+}
+// Baunk -> for titles...
+
+html{
+  font-family: 'Jura', sans-serif;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Baunk';
+}
