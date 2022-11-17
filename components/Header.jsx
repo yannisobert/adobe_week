@@ -33,7 +33,7 @@ return (
                 <h2>5 <br/>Énigmes</h2>
                 <h4>
                     À résoudre suivant les 5 axes de l'
-                    <a href="iim.fr">
+                    <a target="blank" href="https://www.iim.fr/">
                         IIM
                     </a>.
                 </h4>

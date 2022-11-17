@@ -1,3 +1,6 @@
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 const imgLoadAnim = document.querySelector('.loading img')
 const loading = document.querySelector('.loading')
 console.log(imgLoadAnim, loading)

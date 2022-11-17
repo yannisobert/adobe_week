@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import TheHeader from '../components/Header'
+import Loading from '../components/Loading'
 import SlideNav from '../components/SlideNav'
+import Team from '../components/Team'
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <main>
         <TheHeader />
         <SlideNav />
+        <Loading />
+        <Team />
       </main>
     </div>
   )
