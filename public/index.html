@@ -3,44 +3,115 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script src="/src/main.js" defer></script>
     <title>CDI Enigma</title>
   </head>
   <body>
-    
-  </body>
-</html>
-<!-- <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>CDI Enigma</title>
-  </head>
-  <body>
-    <h1>Example to reproduce:</h1>
-    <div style="margin: 1%; border: 4mm ridge rgba(211, 220, 50, .6);">
-      <h1>Hello future web developers!</h1>
-      <p>This is your first exercise in web development, you can see the documents of html & css for append!</p>
-      <div style="display: flex; justify-content: space-around">
-        <p>What is the best axe ?</p>
-        <div>
-        <p>Responses:</p>
-        <ul>
-          <li><input type="checkbox">Coding ✌️</li>
-          <li><input type="checkbox">Coding 🤩</li>
-          <li><input type="checkbox">Coding 😎</li>
-        </ul>
+      <h1>Reproduis ce bloc pour retrouver le code que tu recherches :</h1>
+      <div style="margin: 3%">
+        <div class="owlTwo">
+            <div>
+                <div style="border: 4px solid red; background-color: lightblue; text-align: center;">
+                    <h2>Cyberpunk</h2>
+                    <p>Il est est un genre de la pop culture.</p>
+              </div>
+          </div>
         </div>
       </div>
-      <div style="display: flex; justify-content: space-between; gap: 10%">
-        <p>La transformation digitale et les changements qu’elle implique sur les consommateurs et les professionnels sont si nombreux que les entreprises doivent adapter leurs systèmes d’information pour les ouvrir aux plateformes web et mobiles et intégrer les dernières évolutions telles que le cloud, les objets connectés, le big data, l’intelligence artificielle ou le machine learning.</p>
-        <p style="text-align: center">Le secteur du développement web est composé de sociétés spécialisées en  technologies : startups, entreprises de services numériques (ESN) ou éditeurs de logiciels ainsi que les directions de la technologie et des systèmes d’information des grandes entreprises.</p>
-        <p style="text-align: right">Les profils les plus recherchés en Coding & Digital Innovation sont des experts techniques ayant des qualités d’analyse, de travail d’équipe et capables d’évoluer au rythme des technologies.</p>
-      </div>
-    </div>
+      <article>
+          <h2>Indices pour résoudre pour ton énigme : <button onclick="openIndices()">▶</button>️</h2>
+          <div id="indices" class="indicesHidden">
+            <h3>Pour les bordures :  <button onclick="openBorduresIndices()">▶</button></h3>
+              <ul id="borduresIndices" class="indicesHidden">
+                  <li>W3School est là pour vous, cliquez <a href="https://www.w3schools.com/css/css_border.asp" target="blank">ici</a></li>
+                  <li>La bordure est d'une épaisseur de 4 pixels, solid et rouge. </li>
+              </ul>
+            <h3>Pour la couleur du fond : <button onclick="openBackgroundIndices()">▶</button></h3>
+            <ul id="backgroundIndices" class="indicesHidden">
+                <li>W3School est là pour vous, cliquez <a href="https://www.w3schools.com/cssref/pr_background-color.php" target="blank">ici</a></li>
+                <li>Le fond a comme couleur "lightblue".</li>
+            </ul>
+            <h3>Pour le titre : <button onclick="openTitleIndices()">▶</button></h3>
+            <ul id="titleIndices" class="indicesHidden">
+                <li>W3School est là pour vous, cliquez <a href="https://www.w3schools.com/tags/tag_title.asp" target="blank">ici</a></li>
+                <li>Le titre est un titre secondaire et aligné au centre.</li>
+            </ul>
+            <h3>Pour le petit texte : <button onclick="openTextIndices()">▶</button></h3>
+            <ul id="textIndices" class="indicesHidden">
+                <li>W3School est là pour vous, cliquez <a href="https://www.w3schools.com/css/css_text.asp" target="blank">ici</a></li>
+                <li>Il est un simple paragraphe et aligné au centre.</li>
+            </ul>
+          </div>
+      </article>
     <div id="root"></div>
+    <button onclick="onClick()">Valid</button>
   </body>
-</html> -->
+</html>
+
+<script>
+  function onClick() {
+    let owl = document.querySelector('.stp').srcdoc
+    let owlTwo = document.querySelector('.owlTwo').children
+
+    console.log(owl.replace(/^\s+|\s+$/gm,''))
+    console.log(owlTwo[0].innerHTML.replace(/^\s+|\s+$/gm,''))
+
+    if (owl.replace(/^\s+|\s+$/gm,'') === owlTwo[0].innerHTML.replace(/^\s+|\s+$/gm,'')) {
+      console.log('yeahhh')
+      alert('YOU WIN MOTHER FUCKER')
+    } else {
+      console.log('nooooooooooo')
+      alert('CHEH')
+    }
+  }
+
+  function openIndices() {
+      const indices = document.getElementById('indices')
+      if (indices.className === 'indicesHidden') {
+          indices.classList.remove('indicesHidden')
+      } else {
+          indices.classList.add('indicesHidden')
+      }
+  }
+
+  function openBorduresIndices() {
+      const indices = document.getElementById('borduresIndices')
+      if (indices.className === 'indicesHidden') {
+          indices.classList.remove('indicesHidden')
+      } else {
+          indices.classList.add('indicesHidden')
+      }
+  }
+
+  function openBackgroundIndices() {
+      const indices = document.getElementById('backgroundIndices')
+      if (indices.className === 'indicesHidden') {
+          indices.classList.remove('indicesHidden')
+      } else {
+          indices.classList.add('indicesHidden')
+      }
+  }
+
+  function openTitleIndices() {
+      const indices = document.getElementById('titleIndices')
+      if (indices.className === 'indicesHidden') {
+          indices.classList.remove('indicesHidden')
+      } else {
+          indices.classList.add('indicesHidden')
+      }
+  }
+
+  function openTextIndices() {
+      const indices = document.getElementById('textIndices')
+      if (indices.className === 'indicesHidden') {
+          indices.classList.remove('indicesHidden')
+      } else {
+          indices.classList.add('indicesHidden')
+      }
+  }
+</script>
+
+<style>
+    .indicesHidden {
+        display: none;
+    }
+</style>
