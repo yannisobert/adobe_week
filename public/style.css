@@ -9,9 +9,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
     padding: 0;
     border: 0;
-    font: inherit;
     vertical-align: baseline;
-    color: #fffcf0;
 }
 
 html {
@@ -36,12 +34,17 @@ a {
     font-family: "Baunk-woff";
     src: local("Baunk"), url("/public/assets/typos/Baunk.woff") format("woff");
 }
-html {
+header,
+.team,
+.slide-nav {
     font-family: "Jura", sans-serif;
+    color: #fffcf0;
 }
 
-h1, h2, h3, h4, h5 {
+header,
+.team {
     font-family: "Syne";
+    color: #fffcf0;
 }
 
 header {
@@ -206,6 +209,7 @@ header .header-container .scroll-indicator-container .scroll-indicator:nth-of-ty
 header .header-container .scroll-indicator-container span {
     text-transform: uppercase;
     margin-top: 4px;
+    font-family: 'Jura';
 }
 
 @keyframes iimscape {
@@ -244,22 +248,13 @@ html, body {
 
 body {
     background-color: #050400;
-    width: 100%;
-}
-body  {
-    width: 100%;
-}
-body   {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-body    {
+    flex-direction: column;
+    gap: 20vh;
     max-width: 1400px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 body    .slide-nav {
     position: fixed;
