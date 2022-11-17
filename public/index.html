@@ -73,7 +73,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div style="color: white">
           <h2>Indices pour résoudre pour ton énigme : <button onclick="openIndices()">▶</button>️</h2>
           <div id="indices" class="indicesHidden">
             <h3>Pour les bordures :  <button onclick="openBorduresIndices()">▶</button></h3>
@@ -119,6 +119,7 @@
           </div>
       </div>
 
+
         <nav class="slide-nav">
             <div class="ul-color">
                 <ul>
@@ -162,7 +163,7 @@
 
   function openIndices() {
       const indices = document.getElementById('indices')
-      if (indices.class === 'indicesHidden') {
+      if (indices.classList.value === 'indicesHidden') {
           indices.classList.remove('indicesHidden')
       } else {
           indices.classList.add('indicesHidden')
@@ -171,7 +172,7 @@
 
   function openBorduresIndices() {
       const indices = document.getElementById('borduresIndices')
-      if (indices.class === 'indicesHidden') {
+      if (indices.classList.value === 'indicesHidden') {
           indices.classList.remove('indicesHidden')
       } else {
           indices.classList.add('indicesHidden')
@@ -180,7 +181,7 @@
 
   function openBackgroundIndices() {
       const indices = document.getElementById('backgroundIndices')
-      if (indices.class === 'indicesHidden') {
+      if (indices.classList.value === 'indicesHidden') {
           indices.classList.remove('indicesHidden')
       } else {
           indices.classList.add('indicesHidden')
@@ -189,7 +190,7 @@
 
   function openTitleIndices() {
       const indices = document.getElementById('titleIndices')
-      if (indices.class === 'indicesHidden') {
+      if (indices.classList.value === 'indicesHidden') {
           indices.classList.remove('indicesHidden')
       } else {
           indices.classList.add('indicesHidden')
@@ -198,16 +199,10 @@
 
   function openTextIndices() {
       const indices = document.getElementById('textIndices')
-      if (indices.class === 'indicesHidden') {
+      if (indices.classList.value === 'indicesHidden') {
           indices.classList.remove('indicesHidden')
       } else {
           indices.classList.add('indicesHidden')
       }
   }
 </script>
-
-<style>
-    .indicesHidden {
-        display: none;
-    }
-</link>

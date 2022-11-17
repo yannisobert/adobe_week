@@ -360,5 +360,8 @@ body    .team .person img {
     height: 100%;
     object-fit: contain;
 }
+.indicesHidden {
+    display: none;
+}
 
 /*# sourceMappingURL=globals.css.map */
