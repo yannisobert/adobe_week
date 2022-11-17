@@ -1,20 +1,102 @@
-
+html,body{
+    scroll-behavior: smooth;
+}
 body{
     background-color: $almost_black;
     width: 100%;
 
     #__next{
         width: 100%;
-    }
-    .container{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        main{
-            max-width: 1400px;
+        .container{
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            main{
+                max-width: 1400px;
+                width: 100%;
+
+                .slide-nav{
+                    position: fixed;
+                    right: 0;
+                    top: 50%;
+                    transform: translate(170px, -50%);
+                    background-color: transparent;
+                    clip-path: polygon(14% 0, 100% 0, 100% 100%, 14% 100%, 14% 55%, 0 44%, 0 44%, 14% 21%);
+                    transition: .3s transform;
+
+                    &:hover{
+                        transform: translate(0, -50%);
+                    }
+                    &:hover .ul-color ul li span{
+                        opacity: 1;
+                    }
+
+                    .ul-color{
+                        width: 100%;
+                        height: 100%;
+                        clip-path: polygon(14% 0, 100% 0, 100% 100%, 14% 100%, 14% 55%, 0 44%, 0 44%, 14% 21%);
+                        padding: 32px;
+                        padding-left: 64px;
+                        background-color: $yellow;
+
+                        ul{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 32px;
+                            background-color: $yellow;
+    
+                            li{
+                                display: flex;
+                                align-items: center;
+                                justify-content: start;
+                                width: 100%;
+                                gap: 32px;
+    
+                                img{
+                                    height: 32px;
+                                    aspect-ratio: 1;
+                                    object-fit: contain;
+                                }
+                                span{
+                                    opacity: 0;
+                                    transition: .2s opacity;
+                                    transition-delay: .2s;
+                                    font-weight: 900;
+                                    color: $almost_black;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .colors{
+                        width: 100%;
+                        height: 352px;
+                        clip-path: polygon(14% 0, 100% 0, 100% 100%, 14% 100%, 14% 55%, 0 44%, 0 44%, 14% 21%);
+                        position: relative;
+
+                        .color{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            clip-path: polygon(14% 0, 100% 0, 100% 100%, 14% 100%, 14% 55%, 0 44%, 0 44%, 14% 21%);
+                            top: 0;
+                            left: 0;
+                        }
+                        .color1{
+                            background-color: red;
+                            transform: translate(-3px, 3px);
+                        }
+                        .color2{
+                            transform: translate(-4px, 4px);
+                            background-color: lime;
+                        }
+                    }
+                }
+            }
         }
     }
 }

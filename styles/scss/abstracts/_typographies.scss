@@ -1,13 +1,28 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Syncopate:wght@700&family=Syne:wght@800&display=swap');
 // Jura -> for the majority of the site
+// Syne or Syncopate for very bold texts
 
+// @font-face {
+//   font-family: 'Baunk';
+//   src: 
+//     local("Baunk"),
+//     url("/public/assets/typos/Baunk.ttf")
+//     format("ttf");
+// }
 @font-face {
-  font-family: "Baunk";
+  font-family: 'Baunk';
   src: 
-    local("Trickster"),
-    url("/public/assets/typos/Baunk.ttf") 
-    format("ttf");
+    local("Baunk"),
+    url("/public/assets/typos/Baunk.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: 'Baunk-woff';
+  src: 
+    local("Baunk"),
+    url("/public/assets/typos/Baunk.woff")
+    format("woff");
 }
 // Baunk -> for titles...
 
@@ -15,5 +30,5 @@ html{
   font-family: 'Jura', sans-serif;
 }
 h1,h2,h3,h4,h5{
-  font-family: 'Baunk';
+  font-family: 'Syne';
 }

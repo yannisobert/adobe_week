@@ -5,9 +5,11 @@ import ReactDOM from "react-dom/client";
 
 export default function Nav() {
     return (
-    <nav>
+    <nav >
         {/* <ReactSVG /> */}
-        <a href='/'><img src='/assets/imgs/e-lift.png' alt='Logo' /></a>
+        <a href='#header'>
+            <img src='/assets/imgs/logo_e-lift.svg' alt='Logo' />
+        </a>
     </nav>
 )
 }
