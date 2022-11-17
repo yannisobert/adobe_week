@@ -54,7 +54,7 @@ header nav {
     top: 0;
     left: 0;
 }
-header nav a img {
+header nav a svg {
     height: 50px;
 }
 header .header-container {
@@ -246,23 +246,22 @@ body {
     background-color: #050400;
     width: 100%;
 }
-body #__next {
+body  {
     width: 100%;
 }
-body #__next .container {
+body   {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-body #__next .container main {
+body    {
     max-width: 1400px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 50vh;
 }
-body #__next .container main .slide-nav {
+body    .slide-nav {
     position: fixed;
     right: 0;
     top: 50%;
@@ -271,13 +270,13 @@ body #__next .container main .slide-nav {
     clip-path: polygon(14% 0, 100% 0, 100% 100%, 14% 100%, 14% 55%, 0 44%, 0 44%, 14% 21%);
     transition: 0.3s transform;
 }
-body #__next .container main .slide-nav:hover {
+body    .slide-nav:hover {
     transform: translate(0, -50%);
 }
-body #__next .container main .slide-nav:hover .ul-color ul li span {
+body    .slide-nav:hover .ul-color ul li span {
     opacity: 1;
 }
-body #__next .container main .slide-nav .ul-color {
+body    .slide-nav .ul-color {
     width: 100%;
     height: 100%;
     clip-path: polygon(14% 0, 100% 0, 100% 100%, 14% 100%, 14% 55%, 0 44%, 0 44%, 14% 21%);
@@ -285,39 +284,39 @@ body #__next .container main .slide-nav .ul-color {
     padding-left: 64px;
     background-color: #ffd319;
 }
-body #__next .container main .slide-nav .ul-color ul {
+body    .slide-nav .ul-color ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
     background-color: #ffd319;
 }
-body #__next .container main .slide-nav .ul-color ul li {
+body    .slide-nav .ul-color ul li {
     display: flex;
     align-items: center;
     justify-content: start;
     width: 100%;
     gap: 32px;
 }
-body #__next .container main .slide-nav .ul-color ul li img {
+body    .slide-nav .ul-color ul li img {
     height: 32px;
     aspect-ratio: 1;
     object-fit: contain;
 }
-body #__next .container main .slide-nav .ul-color ul li span {
+body    .slide-nav .ul-color ul li span {
     opacity: 0;
     transition: 0.2s opacity;
     transition-delay: 0.2s;
     font-weight: 900;
     color: #050400;
 }
-body #__next .container main .slide-nav .colors {
+body    .slide-nav .colors {
     width: 100%;
     height: 352px;
     clip-path: polygon(14% 0, 100% 0, 100% 100%, 14% 100%, 14% 55%, 0 44%, 0 44%, 14% 21%);
     position: relative;
 }
-body #__next .container main .slide-nav .colors .color {
+body    .slide-nav .colors .color {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -325,15 +324,15 @@ body #__next .container main .slide-nav .colors .color {
     top: 0;
     left: 0;
 }
-body #__next .container main .slide-nav .colors .color1 {
+body    .slide-nav .colors .color1 {
     background-color: red;
     transform: translate(-3px, 3px);
 }
-body #__next .container main .slide-nav .colors .color2 {
+body    .slide-nav .colors .color2 {
     transform: translate(-4px, 4px);
     background-color: lime;
 }
-body #__next .container main .loading {
+body    .loading {
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -345,10 +344,10 @@ body #__next .container main .loading {
     align-items: center;
     display: none;
 }
-body #__next .container main .loading img {
+body   .loading img {
     height: 250px;
 }
-body #__next .container main .team {
+body   .team {
     min-height: 100vh;
     background-repeat: repeat;
     display: flex;
@@ -357,11 +356,11 @@ body #__next .container main .team {
     column-gap: 64px;
     row-gap: 40px;
 }
-body #__next .container main .team .person {
+body    .team .person {
     width: 300px;
     height: 500px;
 }
-body #__next .container main .team .person img {
+body    .team .person img {
     width: 100%;
     height: 100%;
     object-fit: contain;
