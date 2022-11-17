@@ -56,6 +56,7 @@ header nav {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10000;
 }
 header nav a svg {
     height: 50px;
@@ -253,10 +254,14 @@ body {
     align-items: center;
     flex-direction: column;
     /* gap: 20vh; */
+    /* max-width: 1400px; */
+    width: 100%;
+}
+.container{
     max-width: 1400px;
     width: 100%;
 }
-body    .slide-nav {
+body .slide-nav {
     position: fixed;
     right: 0;
     top: 50%;
@@ -264,6 +269,7 @@ body    .slide-nav {
     background-color: transparent;
     clip-path: polygon(14% 0, 100% 0, 100% 100%, 14% 100%, 14% 55%, 0 44%, 0 44%, 14% 21%);
     transition: 0.3s transform;
+    z-index: 10000;
 }
 body    .slide-nav:hover {
     transform: translate(0, -50%);
@@ -286,7 +292,10 @@ body    .slide-nav .ul-color ul {
     gap: 32px;
     background-color: #ffd319;
 }
-body    .slide-nav .ul-color ul li {
+body    .slide-nav .ul-color ul li{
+    width: 100%;
+}
+body    .slide-nav .ul-color ul li a {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -298,20 +307,20 @@ body    .slide-nav .ul-color ul li img {
     aspect-ratio: 1;
     object-fit: contain;
 }
-body    .slide-nav .ul-color ul li span {
+body .slide-nav .ul-color ul li span {
     opacity: 0;
     transition: 0.2s opacity;
     transition-delay: 0.2s;
     font-weight: 900;
     color: #050400;
 }
-body    .slide-nav .colors {
+body .slide-nav .colors {
     width: 100%;
     height: 352px;
     clip-path: polygon(14% 0, 100% 0, 100% 100%, 14% 100%, 14% 55%, 0 44%, 0 44%, 14% 21%);
     position: relative;
 }
-body    .slide-nav .colors .color {
+body .slide-nav .colors .color {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -319,15 +328,15 @@ body    .slide-nav .colors .color {
     top: 0;
     left: 0;
 }
-body    .slide-nav .colors .color1 {
+body .slide-nav .colors .color1 {
     background-color: red;
     transform: translate(-3px, 3px);
 }
-body    .slide-nav .colors .color2 {
+body .slide-nav .colors .color2 {
     transform: translate(-4px, 4px);
     background-color: lime;
 }
-body    .loading {
+body .loading {
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -339,10 +348,10 @@ body    .loading {
     align-items: center;
     display: none;
 }
-body   .loading img {
+body .loading img {
     height: 250px;
 }
-body   .team {
+body .team {
     min-height: 100vh;
     background-repeat: repeat;
     display: flex;
@@ -351,14 +360,36 @@ body   .team {
     column-gap: 64px;
     row-gap: 40px;
 }
-body    .team .person {
+body .team .person {
     width: 300px;
-    height: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
-body    .team .person img {
+body .team .person::after{
+    content: "";
+    position: absolute;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1;
+    border: solid 2px #f72585;
+    top: -8px;
+    right: -16px;
+}
+body .team .person img {
+    width: 100%;
+    height: auto;
     object-fit: contain;
+    z-index: 20;
+}
+body .team .person p{
+    opacity: 0;
+    transform: translateY(24px);
+    transition: .2s;
+}
+body .team .person:hover p {
+    opacity: 1;
+    transform: translateY(32px);
 }
 .indicesHidden {
     display: none;
@@ -366,10 +397,100 @@ body    .team .person img {
 
 /*# sourceMappingURL=globals.css.map */
 
+button{
+    padding: 8px 32px;
+    clip-path: polygon(0 0, 88% 0, 100% 25%, 100% 100%, 12% 100%, 0 75%);
+    background-color: #f72585;
+    font-size: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #050400;
+}
+
+button div{
+    clip-path: polygon(100% 50%, 0 10%, 0 90%);
+    background-color: #050400;
+    height: 20px;
+    aspect-ratio: 1;
+}
+
 .sub-title{
-    font-size: 48px;
+    font-size: 64px;
     color: #f72585;
+    margin-top: 30vh;
+    margin-bottom: 24px;
+    font-family: 'Syncopate';
+    position: relative;
+    background-color: #050400;
+}
+
+.sub-title::before{
+    content: attr(data-text);
+    position: absolute;
+    font-size: 64px;
+    -webkit-text-stroke: 2px #f72585;
+    color: transparent;
+    background-color: #050400;
     margin-top: 20vh;
+    margin-bottom: 24px;
+    font-family: 'Syncopate';
+    top: -200px;
+    left: 0;
+    z-index: -1;
+}
+.sub-title::after{
+    content: attr(data-text);
+    position: absolute;
+    font-size: 64px;
+    -webkit-text-stroke: 2px #f72585;
+    color: transparent;
+    background-color: #050400;
+    margin-top: 20vh;
+    margin-bottom: 24px;
+    font-family: 'Syncopate';
+    top: -170px;
+    left: 0;
+    z-index: -1;
+}
+
+.axe-3d,
+.axe-cd,
+.axe-jv,
+.axe-cdeb{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    color: #fffcf0;
+    font-size: 24px;
+    width: 100%;
+    font-family: 'Jura';
+}
+.axe-3d p,
+.axe-cd p,
+.axe-jv p,
+.axe-cdeb p{
+    width: 100%;
+}
+.axe-3d img,
+.axe-cd img,
+.axe-jv img{
+    width: 80%;
+}
+.axe-cdeb table{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+.axe-cdeb th{
+    font-size: 24px;
+}
+th, td{
+    padding: 8px 32px;
+}
+.axe-cdeb tr{
+    font-size: 16px;
 }
 
 /* #smoke {
@@ -380,7 +501,6 @@ body    .team .person img {
 	left: 120px;
     top: 313px;
 } 
-
 
 #smoke span { 
     display: block;
