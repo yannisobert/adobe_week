@@ -4,7 +4,6 @@ import useLocalStorage from '../hooks/useLocalStorage'
 
 function App() {
   const [html, setHtml] = useLocalStorage('html', '')
-  const [css, setCss] = useLocalStorage('css', '')
   const [srcDoc, setSrcDoc] = useState('')
 
   useEffect(() => {
@@ -13,7 +12,7 @@ function App() {
     })
 
     return () => clearTimeout(timeout)
-  }, [html, css])
+  }, [html])
 
   return (
     <>
