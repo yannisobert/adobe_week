@@ -63,7 +63,13 @@
 
   </header>
     
-    <h2 class="sub-title">L'Équipe</h2>
+    <h2 class="sub-title">Enigme CreaDesign :</h2>
+    <div>
+
+    </div>
+
+
+    <h2 class="sub-title">Enigme Coding & Digital Innovation :</h2>
       <h3>Reproduis ce bloc pour retrouver le code que tu recherches :</h3>
       <div>
         <div class="owlTwo" style="width: 110vh;">
@@ -102,11 +108,53 @@
       </div>
     <div id="root"></div>
     <button onclick="onClick()">Valid</button>
-  <div style="color: white">
-      <h2>Enigme Communication :</h2>
+  <h2 class="sub-title">Enigme Animation 3D  :</h2>
+  <h2 class="sub-title">Enigme Jeux Videos :</h2>
+  <h2 class="sub-title">Enigme Communication :</h2>
+  <div>
+      <p style="color: white">Déterminer une statégie réseaux sociaux (SMO).</p>
+      <p style="color: white">Notre stratégie et nos objectifs sur les réseaux sociaux</p>
+      <div style="color: white">
+          <table>
+              <tr>
+                  <th>YouTube</th>
+                  <th>Facebook</th>
+                  <th>Instagram</th>
+                  <th>TikTok</th>
+              </tr>
+              <tr>
+                  <td>1. Vidéos d'entrainement</td>
+                  <td>5. Publicités Facebook</td>
+                  <td>9. Jeux concours</td>
+                  <td>13. Publier un post</td>
+              </tr>
+              <tr>
+                  <td>2. Promotion d'évènements</td>
+                  <td>6. Publication de la marque</td>
+                  <td>10. Hashtag</td>
+                  <td>14. Contenus vidéos</td>
+              </tr>
+              <tr>
+                  <td>3. Tutoriels</td>
+                  <td>7. Campagne promotionnelle</td>
+                  <td>11. Visuel de la marque</td>
+                  <td>15. Hashtag</td>
+              </tr>
+              <tr>
+                  <td>4. Jeux concours</td>
+                  <td>8. Article de blog</td>
+                  <td>12. Créer l'engagement</td>
+                  <td>16. Challenge</td>
+              </tr>
+          </table>
+          <p style="margin-top: 8%">Quel est le numéro  de la partie de la stratégie qui ne va pas ?</p>
+          <input id="inputCom">
+          <button onclick="validCom()">Valider</button>
+      </div>
   </div>
+
   
-    <h2 class="sub-title">L'Équipe</h2>
+    <h2 class="sub-title">L'Equipe :</h2>
       <div class='team'>
           <div class="person">
               <img src="img/profile/pierre.jpeg" alt="Image of a member of the team" />
@@ -180,10 +228,8 @@
     console.log(owlTwo[0].innerHTML.replace(/^\s+|\s+$/gm,''))
 
     if (owl.replace(/^\s+|\s+$/gm,'') === owlTwo[0].innerHTML.replace(/^\s+|\s+$/gm,'')) {
-      console.log('yeahhh')
-      alert('YOU WIN MOTHER FUCKER')
+      alert('Salle : **1')
     } else {
-      console.log('nooooooooooo')
       alert('CHEH')
     }
   }
@@ -230,6 +276,15 @@
           indices.classList.remove('indicesHidden')
       } else {
           indices.classList.add('indicesHidden')
+      }
+  }
+
+  function validCom() {
+      const response = document.getElementById('inputCom').value
+      if (response === '13') {
+          alert('Salle : 80*')
+      } else {
+          alert('It is false.')
       }
   }
 </script>
