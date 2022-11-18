@@ -48,7 +48,7 @@ header,
 }
 
 header {
-    height: calc(100vh - 78px);
+    height: 100vh;
     width: 100%;
 }
 header nav {
@@ -245,6 +245,7 @@ header .header-container .scroll-indicator-container span {
 }
 html, body {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -271,13 +272,13 @@ body .slide-nav {
     transition: 0.3s transform;
     z-index: 10000;
 }
-body    .slide-nav:hover {
+body .slide-nav:hover {
     transform: translate(0, -50%);
 }
-body    .slide-nav:hover .ul-color ul li span {
+body .slide-nav:hover .ul-color ul li span {
     opacity: 1;
 }
-body    .slide-nav .ul-color {
+body .slide-nav .ul-color {
     width: 100%;
     height: 100%;
     clip-path: polygon(14% 0, 100% 0, 100% 100%, 14% 100%, 14% 55%, 0 44%, 0 44%, 14% 21%);
@@ -285,24 +286,24 @@ body    .slide-nav .ul-color {
     padding-left: 64px;
     background-color: #ffd319;
 }
-body    .slide-nav .ul-color ul {
+body .slide-nav .ul-color ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
     background-color: #ffd319;
 }
-body    .slide-nav .ul-color ul li{
+body .slide-nav .ul-color ul li{
     width: 100%;
 }
-body    .slide-nav .ul-color ul li a {
+body .slide-nav .ul-color ul li a {
     display: flex;
     align-items: center;
     justify-content: start;
     width: 100%;
     gap: 32px;
 }
-body    .slide-nav .ul-color ul li img {
+body .slide-nav .ul-color ul li img {
     height: 32px;
     aspect-ratio: 1;
     object-fit: contain;
@@ -328,29 +329,14 @@ body .slide-nav .colors .color {
     top: 0;
     left: 0;
 }
-body .slide-nav .colors .color1 {
+/* body .slide-nav .colors .color1 {
     background-color: red;
     transform: translate(-3px, 3px);
 }
 body .slide-nav .colors .color2 {
     transform: translate(-4px, 4px);
     background-color: lime;
-}
-body .loading {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: #050400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-body .loading img {
-    height: 250px;
-}
+} */
 body .team {
     min-height: 100vh;
     background-repeat: repeat;
@@ -369,10 +355,12 @@ body .team .person {
 }
 body .team .person::after{
     content: "";
+    background-image: url('img/patern-behind-image.png');
+    background-repeat: no-repeat;
     position: absolute;
     width: 100%;
     aspect-ratio: 1;
-    border: solid 2px #f72585;
+    /* border: solid 2px #f72585; */
     top: -8px;
     right: -16px;
 }
@@ -422,62 +410,103 @@ button div{
     font-family: 'Syncopate';
     position: relative;
     background-color: #050400;
+    width: 100%;
 }
 
 .sub-title::before{
     content: attr(data-text);
     position: absolute;
     font-size: 64px;
-    -webkit-text-stroke: 2px #f72585;
+    -webkit-text-stroke: 2px #4cc9f0;
     color: transparent;
     background-color: #050400;
     margin-top: 20vh;
     margin-bottom: 24px;
     font-family: 'Syncopate';
-    top: -200px;
+    top: 0;
     left: 0;
+    transform: translateY(-26vh);
     z-index: -1;
 }
 .sub-title::after{
     content: attr(data-text);
     position: absolute;
     font-size: 64px;
-    -webkit-text-stroke: 2px #f72585;
+    -webkit-text-stroke: 2px #ffd319;
     color: transparent;
     background-color: #050400;
     margin-top: 20vh;
     margin-bottom: 24px;
     font-family: 'Syncopate';
-    top: -170px;
+    top: 0;
     left: 0;
+    transform: translateY(-23vh);
     z-index: -1;
 }
 
 .axe-3d,
 .axe-cd,
 .axe-jv,
-.axe-cdeb{
+.axe-cdeb,
+.axe-cdi{
     width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
+}
+.axe-3d,
+.axe-cd,
+.axe-jv,
+.axe-cdeb{
     color: #fffcf0;
     font-size: 24px;
     width: 100%;
     font-family: 'Jura';
 }
+
 .axe-3d p,
 .axe-cd p,
 .axe-jv p,
 .axe-cdeb p{
     width: 100%;
 }
-.axe-3d img,
-.axe-cd img,
-.axe-jv img{
+
+.image-div{
     width: 80%;
+    display: grid;
+    overflow: hidden;
 }
+
+.axe-3d .image-div img,
+.axe-cd .image-div img,
+.axe-jv .image-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.image-div .colored{
+    width: 100%;
+    height: 100%;
+    background-color: #f72585;
+    z-index: 5;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.image-div .colored2{
+    background-color: #050400;
+}
+
+
 .axe-cdeb table{
     display: flex;
     flex-wrap: wrap;
@@ -486,11 +515,111 @@ button div{
 .axe-cdeb th{
     font-size: 24px;
 }
-th, td{
+.axe-cdeb th, 
+.axe-cdeb td{
     padding: 8px 32px;
 }
 .axe-cdeb tr{
     font-size: 16px;
+}
+.axe-cdeb tr td span{
+    font-size: 16px;
+    color: #f72585;
+}
+#inputCom{
+    background-color: transparent;
+    border: solid 2px #f72585;
+    padding: 8px 32px;
+    font-size: 20px;
+    color: #fffcf0;
+}
+.axe-cdeb div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+footer{
+    width: 100%;
+    min-height: 50vh;
+    background-color: #4cc9f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .left,
+footer .right{
+    display: flex;
+    max-width: 700px;
+    min-height: 50vh;
+}
+footer .left{
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: #f72585;
+    font-family: 'Jura';
+    font-size: 32px;
+}
+footer .left a{
+    color: #f72585;
+    position: relative;
+}
+
+footer .left a:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: #f72585;
+    transition: 0.3s;
+    transform-origin: right;
+}
+footer .left a:hover:before {
+    transform: scaleX(0);
+}
+footer .left a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: #f72585;
+    transition: 0.3s;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition-delay: 0.1s;
+}
+footer .left a:hover:after {
+    transform: scaleX(1);
+}
+footer .right{
+    justify-content: end;
+    align-items: end;
+}
+footer .right img{
+    max-height: 500px;
+}
+
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #050400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 100000;
+}
+.loading svg{
+    width: 200px;
 }
 
 /* #smoke {
