@@ -385,7 +385,8 @@ body .team .person:hover p {
 
 /*# sourceMappingURL=globals.css.map */
 
-button{
+button,
+.dl{
     padding: 8px 32px;
     clip-path: polygon(0 0, 88% 0, 100% 25%, 100% 100%, 12% 100%, 0 75%);
     background-color: #f72585;
@@ -393,6 +394,18 @@ button{
     white-space: nowrap;
     cursor: pointer;
     color: #050400;
+    font-weight: 500;
+}
+.dl{
+    padding: 16px 32px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 16px;
+}
+.dl img{
+    height: 32px;
+    aspect-ratio: 1;
 }
 
 button div{
