@@ -1,5 +1,12 @@
-### CDI CodePen
-Installation Commands:
-<br><code>yarn</code>
-<br><code>yarn run start</code># adobe_week
-# adobe_week
+# CDI AdobeWeek
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

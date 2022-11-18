@@ -1,67 +1,453 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script src="/src/main.js" defer></script>
     <title>CDI Enigma</title>
-  </head>
-  <body>
-    <h1>Example to reproduce:</h1>
-    <div style="margin: 1%; border: 4mm ridge rgba(211, 220, 50, .6);">
-      <h1>Hello future web developers!</h1>
-      <p>This is your first exercise in web development, you can see the documents of html & css for append!</p>
-      <div style="display: flex; justify-content: space-around">
-        <p>What is the best axe ?</p>
-        <div>
-        <p>Responses:</p>
-        <ul>
-          <li><input type="checkbox">Coding ✌️</li>
-          <li><input type="checkbox">Coding 🤩</li>
-          <li><input type="checkbox">Coding 😎</li>
-        </ul>
-        </div>
-      </div>
-      <div style="display: flex; justify-content: space-between; gap: 10%">
-        <p>La transformation digitale et les changements qu’elle implique sur les consommateurs et les professionnels sont si nombreux que les entreprises doivent adapter leurs systèmes d’information pour les ouvrir aux plateformes web et mobiles et intégrer les dernières évolutions telles que le cloud, les objets connectés, le big data, l’intelligence artificielle ou le machine learning.</p>
-        <p style="text-align: center">Le secteur du développement web est composé de sociétés spécialisées en  technologies : startups, entreprises de services numériques (ESN) ou éditeurs de logiciels ainsi que les directions de la technologie et des systèmes d’information des grandes entreprises.</p>
-        <p style="text-align: right">Les profils les plus recherchés en Coding & Digital Innovation sont des experts techniques ayant des qualités d’analyse, de travail d’équipe et capables d’évoluer au rythme des technologies.</p>
-      </div>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="loading">
+        <svg id="Calque_9" data-name="Calque 9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 220.49 157.79"><defs><style>.cls-1,.cls-2{fill:none;}.cls-2{stroke-miterlimit:10;stroke:url(#Dégradé_sans_nom_22);}.cls-3{clip-path:url(#clip-path);}.cls-4{fill:url(#Dégradé_sans_nom_19);}.cls-5{clip-path:url(#clip-path-2);}.cls-6{fill:url(#Dégradé_sans_nom_19-2);}.cls-7{clip-path:url(#clip-path-3);}.cls-8{fill:url(#Dégradé_sans_nom_19-3);}.cls-9{clip-path:url(#clip-path-4);}.cls-10{fill:url(#Dégradé_sans_nom_19-4);}</style><linearGradient id="Dégradé_sans_nom_22" x1="-601.67" y1="-436.57" x2="-473.52" y2="-436.57" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e72f84"/><stop offset="1" stop-color="#ffd318"/></linearGradient><clipPath id="clip-path" transform="translate(658.87 499.22)"><path class="cls-1" d="M-585.22-410.45l11.11-52.24h14.93l-11.11,52.24Z"/></clipPath><linearGradient id="Dégradé_sans_nom_19" x1="16.6" y1="89.67" x2="220.49" y2="89.67" xlink:href="#Dégradé_sans_nom_22"/><clipPath id="clip-path-2" transform="translate(658.87 499.22)"><path class="cls-1" d="M-559.16-436.56l9-7.46h44.79l-3.18,14.93h-37.32l-2.77,13-21.28,29.86Zm2.39-11.21,3.18-14.92h22.39l26.68,14.92Z"/></clipPath><linearGradient id="Dégradé_sans_nom_19-2" x1="16.6" y1="95.11" x2="220.49" y2="95.11" xlink:href="#Dégradé_sans_nom_22"/><clipPath id="clip-path-3" transform="translate(658.87 499.22)"><path class="cls-1" d="M-643.06-410.45l15.47-72.79,8.58,29.88-6,28h37.32l-3.17,14.92Z"/></clipPath><linearGradient id="Dégradé_sans_nom_19-3" x1="15.23" y1="77.64" x2="219.12" y2="77.64" xlink:href="#Dégradé_sans_nom_22"/><clipPath id="clip-path-4" transform="translate(658.87 499.22)"><path class="cls-1" d="M-496.53-447.77h-1.1l-26.09-14.92h64l-3.17,14.92h-18.68L-488.36-416l-21.28,29.86Z"/></clipPath><linearGradient id="Dégradé_sans_nom_19-4" x1="0" y1="96.13" x2="203.89" y2="96.13" xlink:href="#Dégradé_sans_nom_22"/></defs><path class="cls-2" d="M-559.4-426.17q-1.46,4.35-2.9,9.43t-2.9,10.15q-1.45,11.59,9.43,10.15c2.41-.48,4.95-1,7.61-1.45a38.79,38.79,0,0,0,7.62-2.18,109.69,109.69,0,0,0,20.3-9.06q9.4-5.44,18.85-12c2.9-1.93,5.91-3.74,9.06-5.44a54.3,54.3,0,0,0,9.06-6.16c1-.48,2.42-1.2,4.35-2.18s3.38-.47,4.35,1.45a3.64,3.64,0,0,1-.72,4.71,46.29,46.29,0,0,1-3.58,3.55,47.49,47.49,0,0,1-7.3,5.52q-10.15,7.25-19.21,14.14t-19.21,13.41q-7.26,5.08-14.14,9.06a62.23,62.23,0,0,1-14.87,6.16Q-571.72-371-584.77-379q-15.22-8-16-23.2-2.17-25.38,6.16-46t28.64-36.62c2.49-1.9,4.23-3.34,7.12-5.27a66.4,66.4,0,0,1,9.53-5.69c4.34-2.16,10.68-3.1,16-2.81q13.75.74,19.57,10.51t-.72,22.11a77,77,0,0,1-21,25.38q-5.81,3.65-12,7.25T-559.4-426.17ZM-528.94-474q-6.52,0-12.69,8.34a100.78,100.78,0,0,0-9.07,14.14c-1,2.42-1.81,4.83-2.53,7.25s1.32,1.69,6.16-2.18q9.42-6.52,13.41-12.33T-528.94-474Z" transform="translate(658.87 499.22)"/><g class="cls-3"><rect class="cls-4" x="16.6" y="28.01" width="203.89" height="123.32"/></g><g class="cls-5"><rect class="cls-6" x="16.6" y="33.45" width="203.89" height="123.32"/></g><g class="cls-7"><rect class="cls-8" x="15.23" y="15.98" width="203.89" height="123.32"/></g><g class="cls-9"><rect class="cls-10" y="34.47" width="203.89" height="123.32"/></g></svg>
     </div>
-    <div id="root"></div>
-  </body>
+    <main>
+        <div class="container">
+            <header id="header">
+            <nav >
+                <a href='#header'>
+                    <svg id="Calque_9" data-name="Calque 9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 220.49 157.79"><defs><style>.cls-1,.cls-2{fill:none;}.cls-2{stroke-miterlimit:10;stroke:url(#Dégradé_sans_nom_22);}.cls-3{clip-path:url(#clip-path);}.cls-4{fill:url(#Dégradé_sans_nom_19);}.cls-5{clip-path:url(#clip-path-2);}.cls-6{fill:url(#Dégradé_sans_nom_19-2);}.cls-7{clip-path:url(#clip-path-3);}.cls-8{fill:url(#Dégradé_sans_nom_19-3);}.cls-9{clip-path:url(#clip-path-4);}.cls-10{fill:url(#Dégradé_sans_nom_19-4);}</style><linearGradient id="Dégradé_sans_nom_22" x1="-601.67" y1="-436.57" x2="-473.52" y2="-436.57" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e72f84"/><stop offset="1" stop-color="#ffd318"/></linearGradient><clipPath id="clip-path" transform="translate(658.87 499.22)"><path class="cls-1" d="M-585.22-410.45l11.11-52.24h14.93l-11.11,52.24Z"/></clipPath><linearGradient id="Dégradé_sans_nom_19" x1="16.6" y1="89.67" x2="220.49" y2="89.67" xlink:href="#Dégradé_sans_nom_22"/><clipPath id="clip-path-2" transform="translate(658.87 499.22)"><path class="cls-1" d="M-559.16-436.56l9-7.46h44.79l-3.18,14.93h-37.32l-2.77,13-21.28,29.86Zm2.39-11.21,3.18-14.92h22.39l26.68,14.92Z"/></clipPath><linearGradient id="Dégradé_sans_nom_19-2" x1="16.6" y1="95.11" x2="220.49" y2="95.11" xlink:href="#Dégradé_sans_nom_22"/><clipPath id="clip-path-3" transform="translate(658.87 499.22)"><path class="cls-1" d="M-643.06-410.45l15.47-72.79,8.58,29.88-6,28h37.32l-3.17,14.92Z"/></clipPath><linearGradient id="Dégradé_sans_nom_19-3" x1="15.23" y1="77.64" x2="219.12" y2="77.64" xlink:href="#Dégradé_sans_nom_22"/><clipPath id="clip-path-4" transform="translate(658.87 499.22)"><path class="cls-1" d="M-496.53-447.77h-1.1l-26.09-14.92h64l-3.17,14.92h-18.68L-488.36-416l-21.28,29.86Z"/></clipPath><linearGradient id="Dégradé_sans_nom_19-4" x1="0" y1="96.13" x2="203.89" y2="96.13" xlink:href="#Dégradé_sans_nom_22"/></defs><path class="cls-2" d="M-559.4-426.17q-1.46,4.35-2.9,9.43t-2.9,10.15q-1.45,11.59,9.43,10.15c2.41-.48,4.95-1,7.61-1.45a38.79,38.79,0,0,0,7.62-2.18,109.69,109.69,0,0,0,20.3-9.06q9.4-5.44,18.85-12c2.9-1.93,5.91-3.74,9.06-5.44a54.3,54.3,0,0,0,9.06-6.16c1-.48,2.42-1.2,4.35-2.18s3.38-.47,4.35,1.45a3.64,3.64,0,0,1-.72,4.71,46.29,46.29,0,0,1-3.58,3.55,47.49,47.49,0,0,1-7.3,5.52q-10.15,7.25-19.21,14.14t-19.21,13.41q-7.26,5.08-14.14,9.06a62.23,62.23,0,0,1-14.87,6.16Q-571.72-371-584.77-379q-15.22-8-16-23.2-2.17-25.38,6.16-46t28.64-36.62c2.49-1.9,4.23-3.34,7.12-5.27a66.4,66.4,0,0,1,9.53-5.69c4.34-2.16,10.68-3.1,16-2.81q13.75.74,19.57,10.51t-.72,22.11a77,77,0,0,1-21,25.38q-5.81,3.65-12,7.25T-559.4-426.17ZM-528.94-474q-6.52,0-12.69,8.34a100.78,100.78,0,0,0-9.07,14.14c-1,2.42-1.81,4.83-2.53,7.25s1.32,1.69,6.16-2.18q9.42-6.52,13.41-12.33T-528.94-474Z" transform="translate(658.87 499.22)"/><g class="cls-3"><rect class="cls-4" x="16.6" y="28.01" width="203.89" height="123.32"/></g><g class="cls-5"><rect class="cls-6" x="16.6" y="33.45" width="203.89" height="123.32"/></g><g class="cls-7"><rect class="cls-8" x="15.23" y="15.98" width="203.89" height="123.32"/></g><g class="cls-9"><rect class="cls-10" y="34.47" width="203.89" height="123.32"/></g></svg>
+                </a>
+            </nav>
+            <div class="header-container">
+                <div class="iimscape-texts">
+                    <div class="texts">
+                        <span>iimscape -</span>
+                        <span>間抜け-</span>
+                        <span>iimscape -</span>
+                        <span>間抜け-</span>
+                        <span>iimscape -</span>
+                        <span>間抜け-</span>
+
+                        <span>iimscape -</span>
+                        <span>間抜け-</span>
+                        <span>iimscape -</span>
+                        <span>間抜け-</span>
+                        <span>iimscape -</span>
+                        <span>間抜け-</span>
+
+                        <span>iimscape -</span>
+                        <span>間抜け-</span>
+                        <span>iimscape -</span>
+                        <span>間抜け-</span>
+                        <span>iimscape -</span>
+                        <span>間抜け-</span>
+                    </div>
+                </div>
+                <div class="left">
+                    <h2>
+                        <span>5</span>  
+                        <br/>
+                        <span>Énigmes</span> 
+                    </h2>
+                    <h4>
+                        À résoudre suivant les 5 axes de l'
+                        <a target="blank" href="https://www.iim.fr/">
+                            IIM
+                        </a>.
+                    </h4>
+                    <div class="blured-shape"></div>
+                </div>
+                <div class="right">
+                    <img class="char" src="/img/char-cyberpunk.png" alt="Picture of a cyberpunk character" />
+                    <div class="blured-shape"></div>
+                </div>
+                <div class="scroll-indicator-container">
+                    <div class="scroll-indicator"></div>
+                    <div class="scroll-indicator"></div>
+                    <div class="scroll-indicator"></div>
+                    <span>Scroll</span>
+                </div>
+            </div>
+
+            </header>
+                
+                <div class="axe-cd">
+                    <h2 class="sub-title" data-text="Enigme CD" id="cd">Enigme CD</h2>
+                    <div class="image-div">
+                        <img src="img/Visuel_Enigme_crea.png" alt="">
+                        <div class="colored"></div>
+                        <div class="colored colored2"></div>
+                    </div>
+                </div>
+
+                <div class="axe-cdi">
+                    <h2 class="sub-title" data-text="Enigme CDI"  id="cdi">Enigme CDI</h2>
+                    <h3>Reproduis ce bloc pour retrouver le code que tu recherches :</h3>
+                    <div>
+                        <div class="owlTwo" style="width: 110vh;">
+                            <div>
+                                <div style="border: 4px solid red; background-color: lightblue; text-align: center;">
+                                    <h2>Cyberpunk</h2>
+                                    <p>Il est est un genre de la pop culture.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div style="color: white">
+                        <h2>Indices pour résoudre pour ton énigme : <button onclick="openIndices()"><div></div></button>️</h2>
+                        <div id="indices" class="indicesHidden">
+                            <h3>Pour les bordures :  <button onclick="openBorduresIndices()"><div></div></button></h3>
+                            <ul id="borduresIndices" class="indicesHidden">
+                                <li>W3School est là pour vous, cliquez <a href="https://www.w3schools.com/css/css_border.asp" target="blank">ici</a></li>
+                                <li>La bordure est d'une épaisseur de 4 pixels, solid et rouge. </li>
+                            </ul>
+                            <h3>Pour la couleur du fond : <button onclick="openBackgroundIndices()"><div></div></button></h3>
+                            <ul id="backgroundIndices" class="indicesHidden">
+                                <li>W3School est là pour vous, cliquez <a href="https://www.w3schools.com/cssref/pr_background-color.php" target="blank">ici</a></li>
+                                <li>Le fond a comme couleur "lightblue".</li>
+                            </ul>
+                            <h3>Pour le titre : <button onclick="openTitleIndices()"><div></div></button></h3>
+                            <ul id="titleIndices" class="indicesHidden">
+                                <li>W3School est là pour vous, cliquez <a href="https://www.w3schools.com/tags/tag_title.asp" target="blank">ici</a></li>
+                                <li>Le titre est un titre secondaire et aligné au centre.</li>
+                            </ul>
+                            <h3>Pour le petit texte : <button onclick="openTextIndices()"><div></div></button></h3>
+                            <ul id="textIndices" class="indicesHidden">
+                                <li>W3School est là pour vous, cliquez <a href="https://www.w3schools.com/css/css_text.asp" target="blank">ici</a></li>
+                                <li>Il est un simple paragraphe et aligné au centre.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="root"></div>
+                    <button onclick="onClick()">Valid</button>
+                </div>
+                
+                <div class="axe-3d">
+                    <h2 class="sub-title" data-text="Enigme 3D" id="3d">Enigme 3D</h2>
+                    <p>Ouvre ce fichier Blender et trouve un indice qui pourrait te permettre d’identifier le hacker.</p>
+                    <div class="image-div">
+                        <img src="img/3d/screen1.png" alt="">
+                        <div class="colored"></div>
+                        <div class="colored colored2"></div>
+                    </div>
+                    <div class="image-div">
+                        <img src="img/3d/screen2.png" alt="">
+                        <div class="colored"></div>
+                        <div class="colored colored2"></div>
+                    </div>
+                    <div class="image-div">
+                        <img src="img/3d/screen3.png" alt="">
+                        <div class="colored"></div>
+                        <div class="colored colored2"></div>
+                    </div>
+                </div>
+                <div class="axe-jv">
+                    <h2 class="sub-title" data-text="Enigme JV" id="jv">Enigme JV</h2>
+                    <p>Sauras tu trouver ton chemin jusqu'à l'ascensseur ?</p>
+                    <a href="CyberPunk Coding Windows v0.8.zip">Download the game</a>
+                    <div class="image-div">
+                        <img src="img/Visuel_Enigme_jv.png" alt="">
+                        <div class="colored"></div>
+                        <div class="colored colored2"></div>
+                    </div>
+                </div>
+                <div class="axe-cdeb">
+                    <h2 class="sub-title" data-text="Enigme CDEB" id="cdeb">Enigme CDEB</h2>
+                    <!-- <p style="color: white">Déterminer une statégie réseaux sociaux (SMO).</p> -->
+                    <p>Trouve la stratégie dans laquelle un de ses objectifs n'est pas perspicace.</p>
+                    <div>
+                        <table>
+                            <tr>
+                                <th>YouTube</th>
+                                <th>Facebook</th>
+                                <th>Instagram</th>
+                                <th>TikTok</th>
+                            </tr>
+                            <tr>
+                                <td><span>1. </span> Vidéos d'entrainement</td>
+                                <td><span>5. </span> Publicités Facebook</td>
+                                <td><span>9. </span> Jeux concours</td>
+                                <td><span>13. </span> Publier un post</td>
+                            </tr>
+                            <tr>
+                                <td><span>2. </span> Promotion d'évènements</td>
+                                <td><span>6. </span> Publication de la marque</td>
+                                <td><span>10. </span> Hashtag</td>
+                                <td><span>14. </span> Contenus vidéos</td>
+                            </tr>
+                            <tr>
+                                <td><span>3. </span> Tutoriels</td>
+                                <td><span>7. </span> Campagne promotionnelle</td>
+                                <td><span>11. </span> Visuel de la marque</td>
+                                <td><span>15. </span> Hashtag</td>
+                            </tr>
+                            <tr>
+                                <td><span>4. </span> Jeux concours</td>
+                                <td><span>8. </span> Article de blog</td>
+                                <td><span>12. </span> Créer l'engagement</td>
+                                <td><span>16. </span> Challenge</td>
+                            </tr>
+                        </table>
+                        <p style="margin-top: 8%">Quel est le numéro  de la partie de la stratégie qui ne va pas ?</p>
+                        <input placeholder="667" id="inputCom">
+                        <button onclick="validCom()">Valider</button>
+                    </div>
+                </div>
+
+            
+                <div class='team'>
+                    <h2 class="sub-title" data-text="L'Equipe">L'Equipe</h2>
+                    <div class="person">
+                        <img src="img/profile/pierre.jpeg" alt="Image of a member of the team" />
+                        <p>Pierre CAILLET</p>
+                    </div>
+                    <div class="person">
+                        <img src="img/profile/juliette.jpeg" alt="Image of a member of the team" />
+                        <p>Juliette HALLAIRE</p>
+                    </div>
+                    <div class="person">
+                        <img src="img/profile/yannis.jpeg" alt="Image of a member of the team" />
+                        <p>Yannis OBERT</p>
+                    </div>
+                    <div class="person">
+                        <img src="img/profile/lorie.jpeg" alt="Image of a member of the team" />
+                        <p>Lorie MARONNE</p>
+                    </div>
+                    <div class="person">
+                        <img src="img/profile/alicia.jpeg" alt="Image of a member of the team" />
+                        <p>Alicia BELKADI</p>
+                    </div>
+                    <div class="person">
+                        <img src="img/profile/robin.jpeg" alt="Image of a member of the team" />
+                        <p>Robin SEGURA</p>
+                    </div>
+                    <div class="person">
+                        <img src="img/profile/samir.jpeg" alt="Image of a member of the team" />
+                        <p>Samir XXXXXXX</p>
+                    </div>
+                    <div class="person">
+                        <img src="img/profile/timothee.jpeg" alt="Image of a member of the team" />
+                        <p>Timothée POTARD</p>
+                    </div>
+                    <div class="person">
+                        <img src="img/profile/morigan.jpeg" alt="Image of a member of the team" />
+                        <p>Morigan LETOURNEAU</p>
+                    </div>
+                </div>
+            <nav class="slide-nav">
+                <div class="ul-color">
+                    <ul>
+                        <li>
+                            <a href="#cd">
+                                <img src="https://www.iim.fr/ecole-web/wp-content/uploads/2021/06/crea.png" alt="icon of the CD specialisation" /> 
+                                <span>Création Design</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#cdi">
+                                <img src="https://www.iim.fr/ecole-web/wp-content/uploads/2021/06/dev.png" alt="icon of the CDI specialisation" /> 
+                                <span>Coding</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#3d">
+                                <img src="https://www.iim.fr/ecole-web/wp-content/uploads/2021/06/3dsvg.png" alt="icon of the 3D specialisation" /> 
+                                <span>Animation 3D</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#jv">
+                                <img src="https://www.iim.fr/ecole-web/wp-content/uploads/2021/06/jv.png" alt="icon of the JV specialisation" /> 
+                                <span>Jeux Vidéos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#cdeb">
+                                <img src="https://www.iim.fr/ecole-web/wp-content/uploads/2021/06/com.png" alt="icon of the CDEB specialisation" /> 
+                                <span>Communication</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </main>
+    <footer>
+        <div class="left">
+            <p>Merci d'avoir joué le jeu! On espère que ça vous a plu!</p>
+            <p>On espère vous voir très rapidement ;)</p>
+            <p>Pour s'inscrire à L'IIM c'est juste <a target="blank" href="https://www.iim.fr/admissions/cycle-bachelor/">là</a>.</p>
+        </div>
+        <div class="right">
+            <img class="char" src="/img/char-cyberpunk2.png" alt="Picture of a cyberpunk character" />
+        </div>
+    </footer>
+</body>
 </html>
-<!DOCTYPE html>
-<!-- <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>CDI Enigma</title>
-  </head>
-  <body>
-    <h1>Example to reproduce:</h1>
-    <div style="margin: 1%; border: 4mm ridge rgba(211, 220, 50, .6);">
-      <h1>Hello future web developers!</h1>
-      <p>This is your first exercise in web development, you can see the documents of html & css for append!</p>
-      <div style="display: flex; justify-content: space-around">
-        <p>What is the best axe ?</p>
-        <div>
-        <p>Responses:</p>
-        <ul>
-          <li><input type="checkbox">Coding ✌️</li>
-          <li><input type="checkbox">Coding 🤩</li>
-          <li><input type="checkbox">Coding 😎</li>
-        </ul>
-        </div>
-      </div>
-      <div style="display: flex; justify-content: space-between; gap: 10%">
-        <p>La transformation digitale et les changements qu’elle implique sur les consommateurs et les professionnels sont si nombreux que les entreprises doivent adapter leurs systèmes d’information pour les ouvrir aux plateformes web et mobiles et intégrer les dernières évolutions telles que le cloud, les objets connectés, le big data, l’intelligence artificielle ou le machine learning.</p>
-        <p style="text-align: center">Le secteur du développement web est composé de sociétés spécialisées en  technologies : startups, entreprises de services numériques (ESN) ou éditeurs de logiciels ainsi que les directions de la technologie et des systèmes d’information des grandes entreprises.</p>
-        <p style="text-align: right">Les profils les plus recherchés en Coding & Digital Innovation sont des experts techniques ayant des qualités d’analyse, de travail d’équipe et capables d’évoluer au rythme des technologies.</p>
-      </div>
-    </div>
-    <div id="root"></div>
-  </body>
-</html> -->
+
+<script>
+
+    // GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+
+const blurShapes = document.querySelectorAll('.blured-shape')
+const allblurShapes = Array.from(blurShapes)
+
+const h2Spans = document.querySelectorAll('.left h2 span')
+const allh2Spans = Array.from(h2Spans)
+const headerLeftP = document.querySelector('.left h4')
+const allHeaderLeftEl = [allh2Spans[0], allh2Spans[1], headerLeftP]
+
+
+console.log(document.querySelector('.sub-title::before'))
+
+window.addEventListener ('load', e => {
+
+    const TL = gsap.timeline({paused : true})
+
+    TL
+    .to ('.loading', 1, {
+        opacity: 0,
+        ease:"power4.out",
+        delai: .3
+    })
+    .from ('.iimscape-texts', .3, {
+        x: "-200%",
+        ease:"power4.out",
+        delai: .1
+    })
+    .from ('.right .char', .3, {
+        opacity: 0,
+        y: "100px",
+        ease:"power4.out"
+    })
+    .staggerFrom(allHeaderLeftEl, .2, {
+        opacity: 0,
+        y: "-160px",
+        ease:"power4.out"
+    },.1)
+    .staggerFrom(allblurShapes.reverse(), .3, {
+        opacity: 0, 
+        ease:"power4.out"
+    },.5)
+    .from('.scroll-indicator-container', 2, {
+        opacity: 0,
+        ease:"power4.out"
+    })
+    
+    TL.play()
+})
+
+const allColored = document.querySelectorAll('.colored')
+const allColoredArray = Array.from(allColored)
+
+allColoredArray.forEach(el => {
+    let randNumber = Math.random()
+
+    // gsap.staggerTo(el, .2,{
+    //     scrollTrigger: {
+    //     trigger: el,
+    //  start: "center bottom",
+    //     duration: 1,
+    //     toggleActions: 'play reverse play reverse',
+    //     },
+    //     x: "100%",
+    // })
+
+    gsap.to(el, randNumber > 0.5 ? {
+        scrollTrigger: {
+        trigger: el,
+        start: "center bottom",
+        duration: 1,
+        toggleActions: 'play reverse play reverse',
+        },
+        x: "100%",
+    }
+    :
+    {
+        scrollTrigger: {
+        trigger: el,
+        start: "center bottom",
+        duration: 1,
+        toggleActions: 'play reverse play reverse',
+        },
+        x: "-100%",
+    }
+    )
+})
+
+// DEV ENIGMA
+function onClick() {
+    let owl = document.querySelector('.stp').srcdoc
+    let owlTwo = document.querySelector('.owlTwo').children
+
+    console.log(owl.replace(/^\s+|\s+$/gm,''))
+    console.log(owlTwo[0].innerHTML.replace(/^\s+|\s+$/gm,''))
+
+    if (owl.replace(/^\s+|\s+$/gm,'') === owlTwo[0].innerHTML.replace(/^\s+|\s+$/gm,'')) {
+    alert('Salle : **1')
+    } else {
+    alert('CHEH')
+    }
+}
+
+function openIndices() {
+    const indices = document.getElementById('indices')
+    if (indices.classList.value === 'indicesHidden') {
+        indices.classList.remove('indicesHidden')
+    } else {
+        indices.classList.add('indicesHidden')
+    }
+}
+
+function openBorduresIndices() {
+    const indices = document.getElementById('borduresIndices')
+    if (indices.classList.value === 'indicesHidden') {
+        indices.classList.remove('indicesHidden')
+    } else {
+        indices.classList.add('indicesHidden')
+    }
+}
+
+function openBackgroundIndices() {
+    const indices = document.getElementById('backgroundIndices')
+    if (indices.classList.value === 'indicesHidden') {
+        indices.classList.remove('indicesHidden')
+    } else {
+        indices.classList.add('indicesHidden')
+    }
+}
+
+function openTitleIndices() {
+    const indices = document.getElementById('titleIndices')
+    if (indices.classList.value === 'indicesHidden') {
+        indices.classList.remove('indicesHidden')
+    } else {
+        indices.classList.add('indicesHidden')
+    }
+}
+
+function openTextIndices() {
+    const indices = document.getElementById('textIndices')
+    if (indices.classList.value === 'indicesHidden') {
+        indices.classList.remove('indicesHidden')
+    } else {
+        indices.classList.add('indicesHidden')
+    }
+}
+
+function validCom() {
+    const response = document.getElementById('inputCom').value
+    if (response === '13') {
+        alert('Salle : 80*')
+    } else {
+        alert('It is false.')
+    }
+}
+
+
+
+</script>

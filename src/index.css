@@ -57,19 +57,3 @@ body {
   border-bottom-left-radius: .5rem;
   overflow: hidden;
 }
-
-.loading{
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  z-index: 1000;
-  background-color: white;
-}
-.loading img{
-  height: 100px;
-  opacity: 0;
-}
